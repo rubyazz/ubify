@@ -2,7 +2,7 @@ project:
 
 own spotify 
 
-Libs or Fram. : Django, Fastapi, Celery, DRF, Pillow, django-ckeditor  
+Libs or Fram. : Django, Fastapi, Celery, DRF, Pillow, django-ckeditor, grappeli  
 
 drf : JWT (auth)
 	: celery
