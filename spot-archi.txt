@@ -1,0 +1,35 @@
+project:
+
+own spotify 
+
+Libs or Fram. : Django, Fastapi, Celery, DRF, Pillow, django-ckeditor  
+
+drf : JWT (auth)
+	: celery
+	: fastapi display (maybe)
+
+Functions : Search (album, song)
+		  : can pay and add song
+
+Models:
+	Singer:
+		profile:
+			img
+			name
+			nickname
+		song-forenkey
+		album-forenkey
+	Album
+		img
+		song-forenkey
+	Song
+		name 
+		img
+		which-from-album
+		time-
+	Likes
+		like
+
+BD :
+	Postgres
+
