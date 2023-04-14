@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'users',
 ]
 
 MIDDLEWARE = [
@@ -130,3 +131,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 GRAPPELLI_ADMIN_TITLE = "Ubify Admin"
 GRAPPELLI_SWITCH_USER = True
+
+
+AUTH_USER_MODEL = 'users.CustomUser'

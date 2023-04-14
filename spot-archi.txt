@@ -33,3 +33,13 @@ Models:
 BD :
 	Postgres
 
+and ROLES: Users must be custom(own models) and how to connect them users od django admin
+
+models for users : first name 
+				 : last name
+				 : img 
+				 : nickname
+				 : email
+				 : is_active
+				 : is_singer
+				 : is_listener
