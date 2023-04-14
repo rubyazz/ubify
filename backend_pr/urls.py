@@ -22,21 +22,21 @@ from django.conf import settings
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
-    TokenVerifyView
+    TokenVerifyView,
 )
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('grappelli/', include(grappelli_urls)),
-    path('', include('dash.urls')),
-    path('api/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('api/token/verify/', TokenVerifyView.as_view(), name='token_verify'),
-] 
+    path("admin/", admin.site.urls),
+    path("grappelli/", include(grappelli_urls)),
+    path("", include("dash.urls")),
+    path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
+    path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
+    path("api/token/verify/", TokenVerifyView.as_view(), name="token_verify"),
+]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
-#request
+# request
 # curl \
 #   -X POST \
 #   -H "Content-Type: application/json" \
@@ -48,7 +48,5 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 # {"refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTY4MTU2MTkyOCwiaWF0IjoxNjgxNDc1NTI4LCJqdGkiOiJjMjhlZDI4MzBiOTA0NTgxOGE4NjJkNjU5NGMwYzM5ZSIsInVzZXJfaWQiOjJ9.17j8EQK1xeMIUrdhiYJfCazvhXsDQYJjHmGcxDbjk-w","access":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNDc1ODI4LCJpYXQiOjE2ODE0NzU1MjgsImp0aSI6ImMzZGNhYzhmMGNhNzRhMjA4YTk5MGVjNjU2NWZlMjkyIiwidXNlcl9pZCI6Mn0._JfqIqbUDfrmKeLliegV9YZqY25NQ8b3rZFtFxT4GN0"}
 
 
-
 # # Example request with access token in headers for login
 # curl -H "Authorization: Bearer <eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNDc1ODI4LCJpYXQiOjE2ODE0NzU1MjgsImp0aSI6ImMzZGNhYzhmMGNhNzRhMjA4YTk5MGVjNjU2NWZlMjkyIiwidXNlcl9pZCI6Mn0._JfqIqbUDfrmKeLliegV9YZqY25NQ8b3rZFtFxT4GN0>" https://localhost:8000/api/login
-

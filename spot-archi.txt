@@ -1,8 +1,8 @@
 project:
 
-own spotify 
+own spotify
 
-Libs or Fram. : Django, Fastapi, Celery, DRF, Pillow, django-ckeditor, grappeli  
+Libs or Fram. : Django, Fastapi, Celery, DRF, Pillow, django-ckeditor, grappeli
 
 drf : JWT (auth)
 	: celery
@@ -23,7 +23,7 @@ Models:
 		img
 		song-forenkey
 	Song
-		name 
+		name
 		img
 		which-from-album
 		time-
@@ -35,11 +35,15 @@ BD :
 
 and ROLES: Users must be custom(own models) and how to connect them users od django admin
 
-models for users : first name 
+models for users : first name
 				 : last name
-				 : img 
+				 : img
 				 : nickname
 				 : email
 				 : is_active
 				 : is_singer
 				 : is_listener
+
+
+
+to find music field for django fields
