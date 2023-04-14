@@ -34,6 +34,10 @@ class Song(models.Model):
 
 
 class Like(models.Model):
+    """
+    Adding song model
+    """
+
     user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     song = models.ForeignKey(Song, on_delete=models.CASCADE)
 
