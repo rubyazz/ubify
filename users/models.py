@@ -63,4 +63,4 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     def has_module_perms(self, app_label):
         return self.is_staff
 
- 	
+ 	# in above we have model likes it must be in each user have their own liked songs how to realize it in models
