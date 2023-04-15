@@ -51,3 +51,19 @@ to find music field for django fields
 
 
 need profile for singers
+	requests: update (singers)
+				make img
+				make nicknames
+
+
+Urls :
+	/admin/ -- admin
+	/api/ -- in developing
+	/api/token/ -- Token Obtain Pair
+	/users/api/register/ -- registration
+
+	/api/general/ -- singers:album:songs
+	/api/artists/list/-- singers list
+	/api/albums/list/ -- albums list
+	/api/songs/list/ -- songs list
+	/users/api/likes -- liked songs of user

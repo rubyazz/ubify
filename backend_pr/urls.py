@@ -28,11 +28,12 @@ from rest_framework_simplejwt.views import (
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("grappelli/", include(grappelli_urls)),
-    path("", include("dash.urls")),
+    path("api/", include("dash.urls")),
     path("users/", include("users.urls")),
     path("api/token/", TokenObtainPairView.as_view(), name="token_obtain_pair"),
     path("api/token/refresh/", TokenRefreshView.as_view(), name="token_refresh"),
     path("api/token/verify/", TokenVerifyView.as_view(), name="token_verify"),
+    path('api/drf-auth/', include('rest_framework.urls')),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
@@ -51,3 +52,8 @@ urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 # # Example request with access token in headers for login
 # curl -H "Authorization: Bearer <eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjgxNDc1ODI4LCJpYXQiOjE2ODE0NzU1MjgsImp0aSI6ImMzZGNhYzhmMGNhNzRhMjA4YTk5MGVjNjU2NWZlMjkyIiwidXNlcl9pZCI6Mn0._JfqIqbUDfrmKeLliegV9YZqY25NQ8b3rZFtFxT4GN0>" https://localhost:8000/api/login
+
+
+# test user
+# honey@gmail.com
+# honey123456
