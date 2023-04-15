@@ -47,3 +47,7 @@ models for users : first name
 
 
 to find music field for django fields
+
+
+
+need profile for singers
