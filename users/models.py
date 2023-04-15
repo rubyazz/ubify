@@ -37,7 +37,9 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
     img = models.ImageField(upload_to="profile_images/")
     nickname = models.CharField(max_length=30)
     email = models.EmailField(unique=True)
-    singer = models.OneToOneField(Singer, null=True, blank=True, on_delete=models.CASCADE)
+    singer = models.OneToOneField(
+        Singer, null=True, blank=True, on_delete=models.CASCADE
+    )
     is_active = models.BooleanField(default=True)
     is_staff = models.BooleanField(default=False)
     is_singer = models.BooleanField(default=False)
@@ -62,8 +64,6 @@ class CustomUser(AbstractBaseUser, PermissionsMixin):
         help_text="Specific permissions for this user.",
         verbose_name="user permissions",
     )
-
-
 
     def get_full_name(self):
         return f"{self.first_name} {self.last_name}"

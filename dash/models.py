@@ -50,10 +50,11 @@ class Like(models.Model):
 #     if created and instance.is_singer:
 #         Singer.objects.create(name=instance.email)
 
+
 @receiver(post_save, sender=settings.AUTH_USER_MODEL)
 def save_singer(sender, instance, **kwargs):
-    if instance.is_singer and not instance.singer:  # Add check to ensure Singer object is not created again
+    if (
+        instance.is_singer and not instance.singer
+    ):  # Add check to ensure Singer object is not created again
         instance.singer = Singer(name=instance.email)
         instance.singer.save()
-
-
