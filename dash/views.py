@@ -29,7 +29,7 @@ class ArtistAPIList(generics.ListCreateAPIView):
     queryset = Singer.objects.all()
     serializer_class = ArtistSerializer
     permission_classes = [IsAdminOrReadOnly]
-    search_fields = ['name', 'nickname']
+    search_fields = ["name", "nickname"]
     filter_backends = (filters.SearchFilter,)
 
 
@@ -37,7 +37,9 @@ class AlbumAPIList(generics.ListCreateAPIView):
     queryset = Album.objects.all()
     serializer_class = AlbumSerializer
     permission_classes = [IsAdminOrReadOnly]
-    search_fields = ['name', ]
+    search_fields = [
+        "name",
+    ]
     filter_backends = (filters.SearchFilter,)
 
 
@@ -45,5 +47,7 @@ class SongAPIList(generics.ListCreateAPIView):
     queryset = Song.objects.all()
     serializer_class = SongSerializer
     permission_classes = [IsAdminOrReadOnly]
-    search_fields = ['name',]
+    search_fields = [
+        "name",
+    ]
     filter_backends = (filters.SearchFilter,)
