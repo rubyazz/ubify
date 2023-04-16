@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     "dash",
     "rest_framework",
     "rest_framework_simplejwt",
+    'drf_yasg',
 ]
 
 MIDDLEWARE = [
@@ -154,6 +155,8 @@ REST_FRAMEWORK = {
         "rest_framework.authentication.SessionAuthentication",
     )
 }
+
+# REST_FRAMEWORK = { 'DEFAULT_SCHEMA_CLASS': 'rest_framework.schemas.coreapi.AutoSchema' }
 
 # auth
 SIMPLE_JWT = {

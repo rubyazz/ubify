@@ -7,7 +7,7 @@ from .views import ArtistAPIList, AlbumAPIList, SongAPIList
 
 
 urlpatterns = [
-    path("", views.main, name="main"),
+    path("", views.hello, name='hello'),
     path("artists/list/", ArtistAPIList.as_view()),
     path("albums/list/", AlbumAPIList.as_view()),
     path("songs/list/", SongAPIList.as_view()),
