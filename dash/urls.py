@@ -8,9 +8,9 @@ from .views import ArtistAPIList, AlbumAPIList, SongAPIList
 
 urlpatterns = [
     path("", views.main, name="main"),
-    path('artists/list/', ArtistAPIList.as_view()),
-    path('albums/list/', AlbumAPIList.as_view()),
-    path('songs/list/', SongAPIList.as_view())
+    path("artists/list/", ArtistAPIList.as_view()),
+    path("albums/list/", AlbumAPIList.as_view()),
+    path("songs/list/", SongAPIList.as_view()),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
