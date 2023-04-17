@@ -1,6 +1,7 @@
-from .models import *
-from rest_framework.renderers import JSONRenderer
 from rest_framework import serializers
+from rest_framework.renderers import JSONRenderer
+
+from .models import *
 
 
 class ArtistSerializer(serializers.ModelSerializer):

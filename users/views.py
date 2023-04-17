@@ -1,6 +1,7 @@
 from rest_framework import generics
-from .serializer import CustomUserRegistrationSerializer
+
 from .models import CustomUser
+from .serializer import CustomUserRegistrationSerializer
 
 
 class CustomUserRegistrationView(generics.CreateAPIView):

@@ -1,5 +1,6 @@
 from django.contrib import admin
-from .models import Singer, Album, Song, Like
+
+from .models import Album, Like, Singer, Song
 
 
 @admin.register(Singer)

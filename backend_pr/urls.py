@@ -1,19 +1,19 @@
-from django.contrib import admin
-from django.urls import path, include, re_path
-from grappelli import urls as grappelli_urls
-from django.conf.urls.static import static
+from allauth.account.views import SignupView
 from django.conf import settings
+from django.conf.urls.static import static
+from django.contrib import admin
+from django.urls import include, path, re_path
+from drf_yasg import openapi
+from drf_yasg.views import get_schema_view
+from grappelli import urls as grappelli_urls
+from rest_framework import permissions
 from rest_framework_simplejwt.views import (
     TokenObtainPairView,
     TokenRefreshView,
     TokenVerifyView,
 )
-from dash import views
-from rest_framework import permissions
-from drf_yasg.views import get_schema_view
-from drf_yasg import openapi
 
-from allauth.account.views import SignupView
+from dash import views
 from users.models import CustomUser
 
 
