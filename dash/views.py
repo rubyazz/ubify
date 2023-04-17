@@ -12,8 +12,9 @@ from .serializers import *
 def main(request):
     return render(request, "index.html")
 
+
 def hello(request):
-    return JsonResponse({'Welcome to':'Ubify Api!'})
+    return JsonResponse({"Welcome to": "Ubify Api!"})
 
 
 class IsAdminOrReadOnly(permissions.BasePermission):
