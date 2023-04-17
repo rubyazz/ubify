@@ -46,22 +46,19 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "drf_yasg",
-    'allauth',
-    'allauth.account',
-    'allauth.socialaccount',
-    'allauth.socialaccount.providers.google',
-    'allauth.socialaccount.providers.github',
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount",
+    "allauth.socialaccount.providers.google",
+    "allauth.socialaccount.providers.github",
 ]
 
 
 AUTHENTICATION_BACKENDS = [
-    
     # Needed to login by username in Django admin, regardless of `allauth`
-    'django.contrib.auth.backends.ModelBackend',
-
+    "django.contrib.auth.backends.ModelBackend",
     # `allauth` specific authentication methods, such as login by e-mail
-    'allauth.account.auth_backends.AuthenticationBackend',
-    
+    "allauth.account.auth_backends.AuthenticationBackend",
 ]
 
 
@@ -162,7 +159,7 @@ GRAPPELLI_SWITCH_USER = True
 
 
 AUTH_USER_MODEL = "users.CustomUser"
-ACCOUNT_EMAIL_REQUIRED = True 
+ACCOUNT_EMAIL_REQUIRED = True
 
 
 # DRF
@@ -188,14 +185,14 @@ SITE_ID = 1
 
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
-    'google': {
+    "google": {
         # For each OAuth based provider, either add a ``SocialApp``
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
-        'APP': {
-            'client_id': '515207560160-3ptjp5ajcetel7h7v6ruoi9mn1i9amnq.apps.googleusercontent.com',
-            'secret': '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',
-            'key': ''
+        "APP": {
+            "client_id": "515207560160-3ptjp5ajcetel7h7v6ruoi9mn1i9amnq.apps.googleusercontent.com",
+            "secret": "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",
+            "key": "",
         }
     }
 }

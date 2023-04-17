@@ -68,7 +68,7 @@ Urls :
 	/api/songs/list/ -- songs list
 	/users/api/likes -- liked songs of user
 
-	
+
 need to update requirements for the end of the project
 
 need profile for edit singer theirselves
