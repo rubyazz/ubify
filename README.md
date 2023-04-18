@@ -1,6 +1,6 @@
 # Project Name: Ubify
 ## Overview
-** This project aims to create a personalized music service, similar to Spotify. It is built using Django, FastAPI, Celery, DRF, Pillow, django-ckeditor, and grappeli. The application allows users to search for songs and albums, create playlists, and pay for premium features. It also provides a platform for artists to showcase their music, create profiles, and interact with their fans.**
+### This project aims to create a personalized music service, similar to Spotify. It is built using Django, FastAPI, Celery, DRF, Pillow, django-ckeditor, and grappeli. The application allows users to search for songs and albums, create playlists, and pay for premium features. It also provides a platform for artists to showcase their music, create profiles, and interact with their fans.
 
 ## Features
 
