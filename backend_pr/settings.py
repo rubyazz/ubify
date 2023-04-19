@@ -102,7 +102,7 @@ DATABASES = {
         "NAME": "ubify",  # Name of your PostgreSQL database
         "USER": "ersultan",  # Username to connect to PostgreSQL
         "PASSWORD": "indesit123456",  # Password to connect to PostgreSQL
-        "HOST": "localhost",  # Hostname or IP address of your PostgreSQL server
+        "HOST": "db",  # Hostname or IP address of your PostgreSQL server
         "PORT": "5432",  # Port number of your PostgreSQL server (leave empty for default)
     }
 }
