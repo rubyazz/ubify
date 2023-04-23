@@ -10,9 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
-import os
-from datetime import timedelta
 from pathlib import Path
+from datetime import timedelta
+import os
+from decouple import config
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -21,11 +22,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-szlv1gc=$#irzxdmews$9ply$$zihgxo#op4q(sq4_s5=yn_pl"
+SECRET_KEY = config('SECRET_KEY')
 
-# SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG', cast=bool)
 
 ALLOWED_HOSTS = []
 
@@ -46,19 +45,22 @@ INSTALLED_APPS = [
     "rest_framework",
     "rest_framework_simplejwt",
     "drf_yasg",
-    "allauth",
-    "allauth.account",
-    "allauth.socialaccount",
-    "allauth.socialaccount.providers.google",
-    "allauth.socialaccount.providers.github",
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    'allauth.socialaccount.providers.google',
+    'allauth.socialaccount.providers.github',
 ]
 
 
 AUTHENTICATION_BACKENDS = [
+    
     # Needed to login by username in Django admin, regardless of `allauth`
-    "django.contrib.auth.backends.ModelBackend",
+    'django.contrib.auth.backends.ModelBackend',
+
     # `allauth` specific authentication methods, such as login by e-mail
-    "allauth.account.auth_backends.AuthenticationBackend",
+    'allauth.account.auth_backends.AuthenticationBackend',
+    
 ]
 
 
@@ -102,7 +104,7 @@ DATABASES = {
         "NAME": "ubify",  # Name of your PostgreSQL database
         "USER": "ersultan",  # Username to connect to PostgreSQL
         "PASSWORD": "indesit123456",  # Password to connect to PostgreSQL
-        "HOST": "db",  # Hostname or IP address of your PostgreSQL server
+        "HOST": "localhost",  # Hostname or IP address of your PostgreSQL server
         "PORT": "5432",  # Port number of your PostgreSQL server (leave empty for default)
     }
 }
@@ -159,7 +161,7 @@ GRAPPELLI_SWITCH_USER = True
 
 
 AUTH_USER_MODEL = "users.CustomUser"
-ACCOUNT_EMAIL_REQUIRED = True
+ACCOUNT_EMAIL_REQUIRED = True 
 
 
 # DRF
@@ -185,14 +187,14 @@ SITE_ID = 1
 
 # Provider specific settings
 SOCIALACCOUNT_PROVIDERS = {
-    "google": {
+    'google': {
         # For each OAuth based provider, either add a ``SocialApp``
         # (``socialaccount`` app) containing the required client
         # credentials, or list them here:
-        "APP": {
-            "client_id": "515207560160-3ptjp5ajcetel7h7v6ruoi9mn1i9amnq.apps.googleusercontent.com",
-            "secret": "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",
-            "key": "",
+        'APP': {
+            'client_id': '515207560160-3ptjp5ajcetel7h7v6ruoi9mn1i9amnq.apps.googleusercontent.com',
+            'secret': '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',
+            'key': ''
         }
     }
 }

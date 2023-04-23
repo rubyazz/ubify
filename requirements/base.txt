@@ -54,6 +54,7 @@ pycparser==2.21
 pydantic==1.10.7
 PyJWT==2.6.0
 pyrsistent==0.19.3
+python-decouple==3.8
 python3-openid==3.2.0
 pytz==2023.3
 PyYAML==6.0

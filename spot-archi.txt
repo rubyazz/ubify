@@ -72,3 +72,7 @@ Urls :
 need to update requirements for the end of the project
 
 need profile for edit singer theirselves
+	and add liked songs
+
+need to write a tests with Pytests
+
