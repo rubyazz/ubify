@@ -1,6 +1,6 @@
 # Project Name: Ubify
 ## Overview
-This project aims to create a personalized music service, similar to Spotify. It is built using Django, FastAPI, Celery, DRF, Pillow, django-ckeditor, and grappeli. The application allows users to search for songs and albums, create playlists, and pay for premium features. It also provides a platform for artists to showcase their music, create profiles, and interact with their fans.
+This project aims to create a personalized music service, similar to Spotify. It is built using Django, Docker, FastAPI, Celery, DRF, Pillow, django-ckeditor, and grappeli. The application allows users to search for songs and albums, create playlists, and pay for premium features. It also provides a platform for artists to showcase their music, create profiles, and interact with their fans.
 
 ## Features
 
@@ -34,6 +34,17 @@ To run the project locally, follow these steps:
 5. Migrate the database using `python3 manage.py migrate`
 6. Create a superuser account using `python3 manage.py createsuperuser`
 7. Start the development server using `python3 manage.py runserver`
+
+## To use Docker with this project, follow these steps:
+
+1. Install Docker on your machine.
+2. Clone the repository to your local machine.
+3. Navigate to the project's root directory in the terminal.
+4. Run the following command to build the Docker image:
+`docker-compose build`
+5. Run the following command to start the Docker containers:
+`docker-compose up`
+6. Access the application in your web browser at http://localhost:8000.
 
 ## APIs
 The project provides the following APIs:
