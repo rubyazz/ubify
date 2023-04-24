@@ -11,6 +11,10 @@ def main(request):
     return render(request, "index.html")
 
 
+def home(request):
+    return render(request, "home.html")
+
+
 def hello(request):
     return JsonResponse({"Welcome to": "Ubify Api!"})
 
