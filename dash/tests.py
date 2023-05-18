@@ -1,9 +1,10 @@
-from django.test import TestCase, Client
+from django.test import Client, TestCase
 from django.urls import reverse
 from rest_framework import status
-from rest_framework.test import APITestCase, APIClient
-from .models import Singer, Album, Song
-from .serializers import ArtistSerializer, AlbumSerializer, SongSerializer
+from rest_framework.test import APIClient, APITestCase
+
+from .models import Album, Singer, Song
+from .serializers import AlbumSerializer, ArtistSerializer, SongSerializer
 
 
 class SingerViewTest(TestCase):
@@ -27,7 +28,9 @@ class SingerViewTest(TestCase):
         self.assertEqual(Singer.objects.last().name, "Jane Doe")
 
     def test_artist_update_view(self):
-        response = self.client.post(reverse("artist_update", args=[self.artist.id]), {"name": "Jack Smith"})
+        response = self.client.post(
+            reverse("artist_update", args=[self.artist.id]), {"name": "Jack Smith"}
+        )
         self.assertEqual(response.status_code, 302)
         self.assertEqual(Singer.objects.get(id=self.artist.id).name, "Jack Smith")
 
@@ -35,7 +38,6 @@ class SingerViewTest(TestCase):
         response = self.client.post(reverse("artist_delete", args=[self.artist.id]))
         self.assertEqual(response.status_code, 302)
         self.assertFalse(Singer.objects.filter(id=self.artist.id).exists())
-
 
 
 class AlbumAPITestCase(APITestCase):

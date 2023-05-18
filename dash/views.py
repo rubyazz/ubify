@@ -1,9 +1,9 @@
+from django.db.models import Prefetch
 from django.http import JsonResponse
 from django.shortcuts import render
 from rest_framework import filters, generics, permissions
-from rest_framework.views import APIView
 from rest_framework.response import Response
-from django.db.models import Prefetch
+from rest_framework.views import APIView
 
 from .models import *
 from .serializers import *
@@ -65,7 +65,5 @@ class SongAPIList(generics.ListCreateAPIView):
 class GeneralAPI(APIView):
     def get(self, request):
         singers = Singer.objects.all()
-        serializer = GeneralSerializer({
-            'singers': singers
-        })
+        serializer = GeneralSerializer({"singers": singers})
         return Response(serializer.data)
