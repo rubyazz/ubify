@@ -1,5 +1,7 @@
 from rest_framework import serializers
 
+from users.models import CustomUser
+
 from .models import *
 
 
@@ -27,3 +29,18 @@ class ArtistSerializer(serializers.ModelSerializer):
 
 class GeneralSerializer(serializers.Serializer):
     singers = ArtistSerializer(many=True)
+
+
+class UserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = (
+            "first_name",
+            "last_name",
+            "img",
+            "nickname",
+            "email",
+            "is_active",
+            "is_singer",
+            "is_listener",
+        )

@@ -75,3 +75,7 @@ need profile for edit singer theirselves
 	and add liked songs
 
 need to write a tests with Pytests
+
+
+how to edit own profile
+and how to add endpoint for this
