@@ -8,7 +8,7 @@ from .models import *
 class SongSerializer(serializers.ModelSerializer):
     class Meta:
         model = Song
-        fields = "__all__"
+        fields = ["name", "audio_file", "img", "time", "album"]
 
 
 class AlbumSerializer(serializers.ModelSerializer):
@@ -16,7 +16,7 @@ class AlbumSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Album
-        fields = "__all__"
+        fields = ["name", "singer", "img", "songs"]
 
 
 class ArtistSerializer(serializers.ModelSerializer):
@@ -24,7 +24,7 @@ class ArtistSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Singer
-        fields = "__all__"
+        fields = ["img", "name", "nickname", "albums"]
 
 
 class GeneralSerializer(serializers.Serializer):
