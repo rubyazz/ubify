@@ -65,5 +65,7 @@ We welcome contributions from anyone who is interested in improving this project
 3. Write your code and tests.
 4. Submit a pull request explaining your changes.
 
+Authors: `Yersultan Abduvalov` 
+
 ## License
 This project is licensed under the MIT License. Feel free to use, modify, and distribute the </br> code as you see fit.
